@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .test-red {
-    background-color: red;
+  background-color: red;
 }

@@ -1,10 +1,20 @@
-import MainNavigation from './MainNavigation';
-import classes from './Layout.module.css';
+import MainNavigation from "./MainNavigation";
+import classes from "./Layout.module.css";
+import Home from "../../home/Home";
 
-function Layout(props:any) {
+function Layout(props: any) {
   return (
     <div>
-      <MainNavigation />
+      <div>
+        <MainNavigation />
+      </div>
+
+      <div>
+        {" "}
+        <Home />
+      </div>
+
+      {/* <Home /> */}
       <main className={classes.main}>{props.children}</main>
     </div>
   );

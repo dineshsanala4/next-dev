@@ -1,0 +1,19 @@
+.blogs-link {
+  position: absolute;
+  top: 3.5rem;
+  right: 15rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-decoration-color: #cc6665; }
+  .blogs-link:hover {
+    font-size: 2.7rem; }
+
+.nav_header {
+  position: absolute;
+  z-index: 10;
+  white-space: nowrap;
+  cursor: pointer; }

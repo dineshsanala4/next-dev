@@ -1,0 +1,137 @@
+//@import "../../Variables.module.scss";
+
+@import "../../../Variables.module.scss";
+
+.content-container {
+  position: absolute;
+  top: 0rem;
+  right: -25rem;
+  width: 100%;
+  height: 100%;
+}
+.back-clouds {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 25rem !important;
+  right: 32rem !important;
+  transform: scale(1.65);
+}
+.front-clouds {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0rem !important;
+  right: 20rem !important;
+  z-index: 10;
+}
+.margin-0 {
+  margin: 0rem !important;
+}
+.right-0 {
+  right: 0 !important;
+}
+.astro-moon {
+  background-image: url(../../app/img/spiral.png);
+  background-size: cover;
+  background-blend-mode: screen;
+  background-position: center;
+  border-radius: 27.5rem;
+  background-size: 75rem;
+  background-repeat: no-repeat;
+  position: relative;
+  height: inherit;
+  z-index: 5;
+  transform: scale(1.3);
+
+  margin-bottom: 8rem;
+
+  animation-name: spin;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  position: relative;
+  top: 4rem;
+}
+.rocket {
+  position: absolute;
+  top: 0;
+  width: 40rem;
+  right: 10rem;
+
+  animation-name: rocket-motion;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.plannets-outline {
+  background-image: url(../../app/img/planets-outline.png);
+  position: fixed;
+  left: 0rem;
+  top: 0rem;
+  width: 14rem;
+  height: 83rem;
+  transform: scale(0.5);
+  background-position: -20rem;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #cc6665;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: 0px 15px 20px rgba(186, 157, 157, 0.4);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  padding: 3rem;
+}
+
+.btn:hover {
+  background-color: #cc6665;
+  box-shadow: 0px 25px 20px rgba(255, 255, 255, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.blogs-link {
+  position: absolute;
+  top: 3.5rem;
+  right: 15rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-decoration-color: #cc6665;
+}
+.landing-page-container {
+  position: absolute;
+  top: 0;
+  right: 10rem;
+
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    to bottom,
+    rgba($color-primary-light, 1),
+    rgba($color-primary-dark, 1)
+  );
+  background-size: cover;
+  background-position: top;
+}

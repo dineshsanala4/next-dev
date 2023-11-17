@@ -22,4 +22,5 @@
     url("./fonts/TT\ Chocolates\ Trial\ Regular.otf") format("opentype");
 }
 
-/* @import "main-styles.scss"; */
+/* @import "./main-styles.scss"; */
+/* @import "./main-styles.scss"; */
