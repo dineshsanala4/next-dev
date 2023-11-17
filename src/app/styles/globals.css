@@ -1,18 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@400;700&display=swap');
-
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "LEMONMILK-Regular";
+  src: local("LEMONMILK-Regular"),
+    url("./fonts/LEMONMILK-Regular.otf") format("opentype");
 }
 
-body {
-  font-family: 'Open Sans', 'Lato', sans-serif;
+@font-face {
+  font-family: "LEMONMILK-Medium";
+  src: local("LEMONMILK-Medium"),
+    url("./fonts/LEMONMILK-Medium.otf") format("opentype");
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Lato', sans-serif;
+@font-face {
+  font-family: "LEMONMILK-Bold";
+  src: local("LEMONMILK-Bold"),
+    url("./fonts/LEMONMILK-Bold.otf") format("opentype");
 }
+
+@font-face {
+  font-family: "Chocolates-Regular";
+  src: local("Chocolates-Regular"),
+    url("./fonts/TT\ Chocolates\ Trial\ Regular.otf") format("opentype");
+}
+
+/* @import "main-styles.scss"; */

@@ -1,0 +1,134 @@
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Add a class to hide the current page content during the transition */
+.leave-from-top {
+  animation: slide-leave-from-top 0.2s ease-out;
+}
+
+.leave-from-bottom {
+  animation: slide-leave-from-bottom 0.2s ease-out;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.enter-from-bottom {
+  animation: slide-enter-from-bottom 0.5s ease-out;
+}
+
+.enter-from-top {
+  animation: slide-enter-from-top 0.5s ease-out;
+}
+
+/* Define the slide-up animation */
+@keyframes slide-enter-from-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-enter-from-top {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Define the slide-enter animation */
+@keyframes slide-leave-from-top {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-leave-from-bottom {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    // transform-origin: 2% 4%;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    // transform-origin: 0% 40%;
+  }
+}
+
+@keyframes rocket-motion {
+  0% {
+    transform: translateY(400%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
