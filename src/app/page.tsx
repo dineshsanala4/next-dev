@@ -1,14 +1,15 @@
+"use client";
 import "./styles/globals.css";
 import Layout from "./components/layout/Layout";
-//import Home from "./home/Home";
+import Home from "./home/Home";
 
-const Home = () => {
+const Home2 = () => {
   return (
     <>
       <Layout />
-      {/* <Home /> */}
+      <Home />
     </>
   );
 };
 
-export default Home;
+export default Home2;

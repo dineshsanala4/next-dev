@@ -1,4 +1,6 @@
-"use client";
+//"use client";
+import "../../app/styles/main-styles.scss";
+import "../../app/styles/main-styles.css";
 import "../../app/styles/App.css";
 import { useRef, useState } from "react";
 import PrevWorks from "../components/PrevWorks/PrevWorks";
@@ -14,7 +16,7 @@ import Header from "../components/Header/Header";
 const Home = () => {
   // const navigate = useNavigate();
 
-  //console.log(document);
+  console.log("document", window.document);
   document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
   const layer1: any = [useRef(""), useRef(""), useRef("")];

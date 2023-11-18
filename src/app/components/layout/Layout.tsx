@@ -8,13 +8,6 @@ function Layout(props: any) {
       <div>
         <MainNavigation />
       </div>
-
-      <div>
-        {" "}
-        <Home />
-      </div>
-
-      {/* <Home /> */}
       <main className={classes.main}>{props.children}</main>
     </div>
   );
