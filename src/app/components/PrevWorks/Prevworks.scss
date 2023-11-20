@@ -1,0 +1,259 @@
+@import "../../styles/main-styles.scss";
+
+.card {
+  // FUNCTIONALITY
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 25rem;
+  width: 90%;
+
+  transform: scale(0.8) translateX(2rem) translateY(6rem);
+
+  border: solid 0.6rem #cc5453;
+  box-sizing: border-box !important;
+
+  &__side {
+    height: 24rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, #cc5453, #cc5453);
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: none;
+    // border: none;
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+    box-shadow: -2rem -1.5rem 4rem rgba($color-white, 0.45);
+    box-shadow: none;
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#172d47, 0.85),
+          rgba(185, 216, 255, 0.85)
+        ),
+        url(../../img/solveacrime.png);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#172d47, 0.85),
+          rgba(185, 216, 255, 0.85)
+        ),
+        url(../../img/cyglass.png);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#172d47, 0.85),
+          rgba(185, 216, 255, 0.85)
+        ),
+        url(../../img/mindspark.jpeg);
+    }
+
+    &--4 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba(#172d47, 0.85),
+          rgba(185, 216, 255, 0.85)
+        ),
+        url(../../img/gogoad.png);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, #fdb2b7, #ff4d5a);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+  }
+
+  // FRONT SIDE STYLING
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 2rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 3rem;
+    font-weight: 100;
+  }
+
+  //@include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    height: auto;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // FRONT SIDE STYLING
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+    }
+  }
+}
+
+.section2 {
+  height: 90%;
+  width: 100%;
+  margin-top: 7%;
+  z-index: 20;
+  position: relative;
+}
+
+.section2::before {
+  content: "";
+  position: absolute; /* set the pseudo-element to absolute position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-radius: 2rem;
+  background-image: radial-gradient(
+      circle at center,
+      rgba(#172d47, 0.85),
+      rgba(#172d47, 0.85)
+    ),
+    url(../../img/skills.jpeg);
+  border: solid 0.6rem #dae5fe;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90rem;
+  opacity: 0.75;
+}
+
+.section2::after {
+  content: "";
+  position: absolute;
+  width: 103%;
+  height: 103%;
+  border: solid 0.65rem #cc6665;
+  box-sizing: border-box;
+  left: -1.7rem;
+  top: 5rem;
+  display: inline-block;
+  padding: 0;
+  margin-left: 0.5rem;
+  margin-top: -6rem;
+  border-radius: 2rem;
+  z-index: -1;
+}
