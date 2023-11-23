@@ -2862,7 +2862,7 @@ body {
 
 .header__text-box {
   position: relative;
-  top: 25rem;
+  top: 20rem;
   left: 10rem !important;
   left: 0;
   z-index: 10; }
