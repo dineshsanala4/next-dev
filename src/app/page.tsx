@@ -63,10 +63,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 //import "../app/Variables.module.scss";
 
 import "./globals.css";
-import Blogs from "./pages/Blogs/Blogs";
-import Details from "./pages/Blogs/Details/Details";
+import Blogs from "./Pages/Blogs/Blogs";
+import Details from "./Pages/Blogs/Details/Details";
 import Home from "./home/Home";
-import Projects from "./pages/Projects/Projects";
+import Projects from "./Pages/Projects/Projects";
 
 function App() {
   return (

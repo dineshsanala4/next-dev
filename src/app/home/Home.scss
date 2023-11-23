@@ -79,7 +79,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 6rem;
+  //margin-top: 1rem;
 }
 
 .btn {
@@ -122,14 +122,34 @@
   position: absolute;
   top: 0;
   right: 10rem;
+  //left: 0rem;
 
   height: 100vh;
   width: 100vw;
+  position: fixed;
   background: linear-gradient(
     to bottom,
     rgba($color-primary-light, 1),
     rgba($color-primary-dark, 1)
   );
-  background-size: cover;
+  background-size: 100% auto;
   background-position: top;
+
+  //overflow: hidden;
+  //scrollbar-width: none;
+  //sc
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+/*.wrap1 {
+  height: 150vh;
+}
+*/
+.previousworks-headingcontainer {
+  position: relative;
+  top: -10rem !important;
+}
+.line-height {
+  line-height: 10rem !important;
 }

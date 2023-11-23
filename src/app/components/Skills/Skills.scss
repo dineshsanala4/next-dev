@@ -59,7 +59,7 @@
 
 .container {
   width: 90%;
-  padding: 5%;
+
   margin: 0 auto;
   overflow: hidden;
 }
@@ -124,6 +124,7 @@
 .titulo {
   opacity: 1;
   animation: titulo 5s ease-out;
+  width: max-content;
 }
 
 /*programacion*/

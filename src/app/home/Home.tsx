@@ -327,18 +327,19 @@ const Home = () => {
                   id="screen-2"
                   className={`leave hide heading-primary main-title`}
                 >
-                  <span className="heading-primary--main font-size-4 letter-space-1">
-                    Previous <br />
-                    Works
-                  </span>
-                  <div className="red-line-seperation">
-                    <span className="red-line"></span>
-                    <span className="red-line2"></span>
+                  <div className="previousworks-headingcontainer">
+                    <span className="heading-primary--main font-size-4 letter-space-1 line-height">
+                      Previous <br />
+                      Works
+                    </span>
+                    <div className="red-line-seperation">
+                      <span className="red-line"></span>
+                      <span className="red-line2"></span>
+                    </div>
+                    <span className="heading-primary--sub">
+                      Projects / <br /> Web Applications.
+                    </span>
                   </div>
-                  <span className="heading-primary--sub">
-                    Projects / <br /> Web Applications.
-                  </span>
-
                   <div className="wrap">
                     <button className="btn" onClick={goToProjects}>
                       Show me more
@@ -350,18 +351,20 @@ const Home = () => {
                   id="screen-4"
                   className={`leave hide heading-primary main-title`}
                 >
-                  <span className="heading-primary--main font-size-4 letter-space-1">
-                    Blogs
-                  </span>
-                  <div className="red-line-seperation">
-                    <span className="red-line"></span>
-                    <span className="red-line2"></span>
+                  <div className="previousworks-headingcontainer">
+                    <span className="heading-primary--main font-size-4 letter-space-1">
+                      Blogs
+                    </span>
+                    <div className="red-line-seperation">
+                      <span className="red-line"></span>
+                      <span className="red-line2"></span>
+                    </div>
+                    <span className="heading-primary--sub">
+                      Articles / <br /> Learnings &
+                      <br />
+                      Resourses.
+                    </span>
                   </div>
-                  <span className="heading-primary--sub">
-                    Articles / <br /> Learnings &
-                    <br />
-                    Resourses.
-                  </span>
 
                   <div className="wrap">
                     <button className="btn" onClick={goToBlogs}>
