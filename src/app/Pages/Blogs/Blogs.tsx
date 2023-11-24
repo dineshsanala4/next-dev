@@ -2,7 +2,7 @@
 import "./Blogs.scss";
 import Header from "../../components/Header/Header";
 import { useFetchBlogsQuery } from "../../store/blogs-api-slice";
-import { Blog } from "../../shared/interfaces/blogs.interface";
+// import { Blog } from "../../shared/interfaces/blogs.interface";
 import { useNavigate } from "react-router";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -56,7 +56,7 @@ const Blogs = () => {
 
         <div className="band">
           {data?.data &&
-            data.data.map((article: Blog) => {
+            data.data.map((article: any) => {
               const thumbnailStyle = {
                 backgroundImage: `url('${article.image}')`,
               };

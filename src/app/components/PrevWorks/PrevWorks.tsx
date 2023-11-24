@@ -1,5 +1,5 @@
 import React, { LegacyRef, useEffect, useRef, useState } from "react";
-import "./PrevWorks.scss";
+import "./PrevWorks.css";
 
 function PrevWorks() {
   return (

@@ -8,5 +8,5 @@ COPY package.json .
 RUN npm install
 # Copy all the content in the docker file
 COPY . .
-# RUn the application
+# Run the application
 CMD ["npm", "run", "dev"]
