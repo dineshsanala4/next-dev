@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import PrevWorks from "../components/PrevWorks/PrevWorks";
 //import "../Variables.module.css";
 //import "./Home.scss";
@@ -18,8 +18,12 @@ import Header from "../components/Header/Header";
 const Home = () => {
   const navigate = useNavigate();
 
-  console.log(document);
-  document.getElementsByTagName("html")[0].style.overflow = "hidden";
+  useEffect(() => {
+    console.log(document);
+    document.getElementsByTagName("html")[0].style.overflow = "hidden";
+  }, [])
+
+  
 
   const layer1: any = [useRef(""), useRef(""), useRef("")];
   const layer2: any = [useRef("")];
