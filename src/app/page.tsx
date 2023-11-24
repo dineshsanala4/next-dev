@@ -74,9 +74,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blogs" element={<Blogs />} />
+        {/* <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<Details />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects" element={<Projects />} /> */}
       </Routes>
     </BrowserRouter>
   );

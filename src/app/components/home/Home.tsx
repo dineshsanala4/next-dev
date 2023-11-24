@@ -16,6 +16,7 @@ import ContactMe from "../ContactMe/ContactMe";
 import { useNavigate } from "react-router";
 import Header from "../Header/Header";
 
+
 const Home = () => {
   const navigate = useNavigate();
 
