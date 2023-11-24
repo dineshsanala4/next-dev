@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Blogs = () => {
   const navigate = useNavigate();
-  document.getElementsByTagName("html")[0].style.overflow = "scroll";
+  // document.getElementsByTagName("html")[0].style.overflow = "scroll";
 
   const { data = [], isFetching } = useFetchBlogsQuery();
 

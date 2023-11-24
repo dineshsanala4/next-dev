@@ -21,7 +21,7 @@ const Home = () => {
   useEffect(() => {
     console.log(document);
     document.getElementsByTagName("html")[0].style.overflow = "hidden";
-  }, [])
+  }, [document])
 
   
 
