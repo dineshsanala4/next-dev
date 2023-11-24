@@ -66,7 +66,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./globals.css";
 import Blogs from "./Pages/Blogs/Blogs";
 import Details from "./Pages/Blogs/Details/Details";
-import Home from "./home/Home";
+import Home from "./components/home/Home";
 import Projects from "./Pages/Projects/Projects";
 
 function App() {

@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import PrevWorks from "../components/PrevWorks/PrevWorks";
+import PrevWorks from "../PrevWorks/PrevWorks";
 //import "../Variables.module.css";
 //import "./Home.scss";
 import "../styles/main-styles.css";
@@ -10,11 +10,11 @@ import "../styles/App.scss";
 import "./Home.scss";
 //import rocket from "../img/rocket.svg";
 //import rocket from "../img/rocket.svg";
-import Skills from "../components/Skills/Skills";
-import Blog from "../components/Blog/Blog";
-import ContactMe from "../components/ContactMe/ContactMe";
+import Skills from "../Skills/Skills";
+import Blog from "../Blog/Blog";
+import ContactMe from "../ContactMe/ContactMe";
 import { useNavigate } from "react-router";
-import Header from "../components/Header/Header";
+import Header from "../Header/Header";
 
 const Home = () => {
   const navigate = useNavigate();
