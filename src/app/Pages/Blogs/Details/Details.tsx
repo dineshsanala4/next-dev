@@ -34,16 +34,16 @@ const Details = () => {
       <div className="details-container">
         <Header />
 
-        <div className="article-content">
+        {/* <div className="article-content">
           <div className="container">
             <div className="cs-blog-detail">
               <div className="cs-main-post">
                 <figure>
-                  {/* <img
+                  <img
                     data-pagespeed-url-hash="2714250504"
                     alt="jobline-blog (8)"
                     src={data && data[0] && data[0].image}
-                  /> */}
+                  />
                 </figure>
               </div>
               <div className="cs-post-title">
@@ -62,7 +62,7 @@ const Details = () => {
               </div>
               <div className="cs-post-option-panel">
                 <h1 className="article-title">{data[0]?.title}</h1>
-                {/* <div className="rich-editor-text">{enrichedContent}</div> */}
+                <div className="rich-editor-text">{enrichedContent}</div>
               </div>
               <div className="cs-tags">
                 <div className="tags">
@@ -105,7 +105,7 @@ const Details = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
