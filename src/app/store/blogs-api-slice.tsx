@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { Blog } from "../shared/interfaces/blogs.interface";
+// import { Blog } from "../shared/";
 
 export const apiSlice: any = createApi({
   reducerPath: "api",
@@ -8,30 +8,30 @@ export const apiSlice: any = createApi({
   }),
 
   endpoints: (builder) => ({
-    fetchBlogs: builder.query<Blog[], number | void>({
+    fetchBlogs: builder.query<any[], number | void>({
       query: () => `/subscriber/articles/backend/`,
     }),
-    fetchBlogById: builder.query<Blog[], number | void>({
+    fetchBlogById: builder.query<any[], number | void>({
       query: (id: any) => ({
         url: `/subscriber/articles/details/${id}`,
         method: "GET",
       }),
     }),
-    addBlog: builder.query<Blog[], number | void>({
+    addBlog: builder.query<any[], number | void>({
       query: (payload: any) => ({
         url: `/admin/articles/`,
         method: "POST",
         body: payload.body,
       }),
     }),
-    editBlog: builder.query<Blog[], number | void>({
+    editBlog: builder.query<any[], number | void>({
       query: (payload: any) => ({
         url: `/admin/articles/${payload.id}/`,
         method: "PUT",
         body: payload.body,
       }),
     }),
-    deleteBlog: builder.query<Blog[], number | void>({
+    deleteBlog: builder.query<any[], number | void>({
       query: (payload: any) => ({
         url: `/admin/articles/${payload.id}/`,
         method: "DELETE",
