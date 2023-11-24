@@ -1,4 +1,4 @@
-@import "../Variables.module.scss";
+@import "../../Variables.module.scss";
 
 .content-container {
   position: absolute;
@@ -30,7 +30,7 @@
   right: 0 !important;
 }
 .astro-moon {
-  background-image: url("../img/spiral.png");
+  background-image: url("../../img/spiral.png");
   background-size: cover;
   background-blend-mode: screen;
   background-position: center;
@@ -64,7 +64,7 @@
   animation-timing-function: linear;
 }
 .plannets-outline {
-  background-image: url("../img/planets-outline.png");
+  background-image: url("../../img/planets-outline.png");
   position: fixed;
   left: 0rem;
   top: 0rem;
