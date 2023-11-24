@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 // import { useParams } from "react-router";
 // import "./Details.scss";

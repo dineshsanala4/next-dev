@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 // import "./Blogs.scss";
 // import Header from "../../components/Header/Header";
 // import { useFetchBlogsQuery } from "../../store/blogs-api-slice";
