@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useState, useEffect } from "react";
 import PrevWorks from "../components/PrevWorks/PrevWorks";
 //import "../Variables.module.css";
