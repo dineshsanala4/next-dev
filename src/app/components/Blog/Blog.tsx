@@ -1,3 +1,4 @@
+"use client";
 import "./Blog.scss";
 
 function Blog() {

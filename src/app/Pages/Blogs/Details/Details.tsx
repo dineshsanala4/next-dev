@@ -1,3 +1,5 @@
+"use client";
+
 import { useParams } from "react-router";
 import "./Details.scss";
 import Header from "../../../components/Header/Header";

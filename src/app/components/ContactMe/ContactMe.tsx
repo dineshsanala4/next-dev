@@ -1,3 +1,4 @@
+"use client";
 import "./ContactMe.scss";
 
 function ContactMe() {

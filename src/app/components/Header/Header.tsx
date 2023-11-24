@@ -1,3 +1,4 @@
+"use client";
 import "./Header.scss";
 import { useNavigate } from "react-router";
 

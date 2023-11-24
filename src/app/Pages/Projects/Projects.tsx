@@ -1,6 +1,9 @@
+"use client";
+
 import { faMarsAndVenusBurst } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Projects.scss";
+
 
 const Projects = () => {
   return (

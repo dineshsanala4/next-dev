@@ -1,3 +1,4 @@
+"use client";
 import Link from 'next/link';
 import classes from './MainNavigation.module.css';
 

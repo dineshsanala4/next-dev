@@ -1,3 +1,4 @@
+"use client";
 import React, { LegacyRef, useEffect, useRef, useState } from "react";
 import "./Skills.scss";
 
