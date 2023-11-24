@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useRef, useState, useEffect } from "react";
 import PrevWorks from "../components/PrevWorks/PrevWorks";
