@@ -15,6 +15,7 @@ import Blog from "../Blog/Blog";
 import ContactMe from "../ContactMe/ContactMe";
 import { useNavigate } from "react-router";
 import Header from "../Header/Header";
+import dynamic from "next/dynamic";
 
 
 const Home = () => {
@@ -505,4 +506,9 @@ const Home = () => {
   );
 };
 
-export default Home;
+// export it with SSR disabled
+const HomeComponent = dynamic(() => Promise.resolve(Home), {
+  ssr: false,
+})
+
+export default HomeComponent;
