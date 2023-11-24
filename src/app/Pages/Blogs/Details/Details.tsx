@@ -39,11 +39,11 @@ const Details = () => {
             <div className="cs-blog-detail">
               <div className="cs-main-post">
                 <figure>
-                  <img
+                  {/* <img
                     data-pagespeed-url-hash="2714250504"
                     alt="jobline-blog (8)"
                     src={data && data[0] && data[0].image}
-                  />
+                  /> */}
                 </figure>
               </div>
               <div className="cs-post-title">
