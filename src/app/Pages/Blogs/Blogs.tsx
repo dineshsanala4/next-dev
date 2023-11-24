@@ -20,7 +20,7 @@ const Blogs = () => {
 
   return (
     <>
-      <Header />
+      {/* <Header />
       <div className="blogs-main">
         <div className="band" style={{ display: "block" }}>
           <div className="search-container" style={{ width: "100%" }}>
@@ -73,7 +73,7 @@ const Blogs = () => {
               );
             })}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

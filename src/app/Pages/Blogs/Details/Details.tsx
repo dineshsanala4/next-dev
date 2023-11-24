@@ -10,20 +10,20 @@ const Details = () => {
 
   let enrichedContent: any;
 
-  if (data[0]?.content.split("<p>").length > 1) {
-    enrichedContent = data[0]?.content
-      .split("<p>")
-      .splice(1, data[0]?.content.length - 1)
-      .map((para: string) => {
-        if (para.split("<h1>").length > 1) {
-          return <h1>{para.split("</p>")[0].split("<h1>")[1]}</h1>;
-        } else {
-          return <p>{para.split("</p>")[0]}</p>;
-        }
-      });
-  } else {
-    enrichedContent = data[0]?.content;
-  }
+  // if (data[0]?.content.split("<p>").length > 1) {
+  //   enrichedContent = data[0]?.content
+  //     .split("<p>")
+  //     .splice(1, data[0]?.content.length - 1)
+  //     .map((para: string) => {
+  //       if (para.split("<h1>").length > 1) {
+  //         return <h1>{para.split("</p>")[0].split("<h1>")[1]}</h1>;
+  //       } else {
+  //         return <p>{para.split("</p>")[0]}</p>;
+  //       }
+  //     });
+  // } else {
+  //   enrichedContent = data[0]?.content;
+  // }
 
   console.log(enrichedContent);
 
