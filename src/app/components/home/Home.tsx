@@ -20,10 +20,13 @@ import Header from "../Header/Header";
 const Home = () => {
   const navigate = useNavigate();
 
+  let doc: any;
+
   useEffect(() => {
     console.log(document);
-    if (document) {
-      document.getElementsByTagName("html")[0].style.overflow = "hidden";
+    doc = document;
+    if (doc) {
+      doc.getElementsByTagName("html")[0].style.overflow = "hidden";
     }
   }, [document])
 
@@ -53,61 +56,64 @@ const Home = () => {
   };
 
   const goToNextPage = async () => {
-    document
+    if (!doc) {
+      return;
+    }
+    doc
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-    document
+      doc
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-    document
+      doc
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.add("leave-from-top");
 
-    document
+      doc
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-    document
+      doc
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-    document
+      doc
       ?.querySelector("#content-" + screenNumber)
       ?.classList.add("leave-from-top");
 
     await new Promise((r) => setTimeout(r, 200));
 
-    document?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
+    doc?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
 
-    document
+    doc
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.remove("leave-from-top");
-    document
+      doc
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.remove("leave-from-bottom");
 
-    document
+      doc
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.remove("hide");
 
-    document
+      doc
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.add("enter-from-bottom");
 
-    document?.querySelector("#content-" + screenNumber)?.classList.add("hide");
+      doc?.querySelector("#content-" + screenNumber)?.classList.add("hide");
 
-    document
+      doc
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.remove("leave-from-top");
-    document
+      doc
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.remove("leave-from-bottom");
 
-    document
+      doc
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.remove("hide");
 
-    document
+      doc
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.add("enter-from-bottom");
 
@@ -115,61 +121,64 @@ const Home = () => {
   };
 
   const goToPrevPage = async () => {
-    document
+    if (!doc) {
+      return;
+    }
+    doc
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-    document
+      doc
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-    document
+      doc
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.add("leave-from-bottom");
 
-    document
+      doc
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-    document
+      doc
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-    document
+      doc
       ?.querySelector("#content-" + screenNumber)
       ?.classList.add("leave-from-bottom");
 
     await new Promise((r) => setTimeout(r, 200));
 
-    document?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
+    doc?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
 
-    document
+    doc
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.remove("leave-from-top");
-    document
+      doc
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.remove("leave-from-bottom");
 
-    document
+      doc
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.remove("hide");
 
-    document
+      doc
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.add("enter-from-top");
 
-    document?.querySelector("#content-" + screenNumber)?.classList.add("hide");
+      doc?.querySelector("#content-" + screenNumber)?.classList.add("hide");
 
-    document
+      doc
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.remove("leave-from-top");
-    document
+      doc
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.remove("leave-from-bottom");
 
-    document
+      doc
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.remove("hide");
 
-    document
+      doc
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.add("enter-from-top");
 
