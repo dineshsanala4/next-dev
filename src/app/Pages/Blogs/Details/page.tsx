@@ -115,6 +115,7 @@
 
 // export default Details;
 
-export const Details = () => {
+const Details = () => {
     return <h1>Details</h1>
 }
+export default Details;
