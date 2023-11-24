@@ -1,3 +1,5 @@
+"use client";
+
 /*import "./styles/globals.css";
 import Layout from "./components/layout/Layout";
 
@@ -13,7 +15,6 @@ export default Home;
 */
 //import "./styles/globals.css";
 //import variables from "./variables.module.scss";
-"use client";
 /*import { BrowserRouter, Route, Routes } from "react-router-dom";
 //import Projects from "./Projects/Projects";
 

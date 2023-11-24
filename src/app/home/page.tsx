@@ -1,9 +1,12 @@
-const Home = () => {
+"use client"
+import Home from "./Home";
+
+const HomePage = () => {
   return (
     <>
-      <h1>Home Page</h1>
+      <Home />
     </>
   );
 };
 
-export default Home;
+export default HomePage;
