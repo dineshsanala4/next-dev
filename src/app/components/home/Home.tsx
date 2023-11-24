@@ -509,6 +509,7 @@ const Home = () => {
 // export it with SSR disabled
 const HomeComponent = dynamic(() => Promise.resolve(Home), {
   ssr: false,
+  
 })
 
 export default HomeComponent;

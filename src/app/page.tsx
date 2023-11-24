@@ -68,6 +68,7 @@ import Blogs from "./Pages/Blogs/page";
 import Details from "./Pages/Blogs/Details/page";
 import Home from "./components/home/Home";
 import Projects from "./Pages/Projects/page";
+import dynamic from "next/dynamic";
 
 function App() {
   return (
@@ -82,4 +83,10 @@ function App() {
   );
 }
 
-export default App;
+// export it with SSR disabled
+const AppComponent = dynamic(() => Promise.resolve(App), {
+  ssr: false,
+  
+})
+
+export default AppComponent;
