@@ -4,10 +4,10 @@ import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
 
 function NewMeetupForm(props:any) {
-  const titleInputRef = useRef();
-  const imageInputRef = useRef();
-  const addressInputRef = useRef();
-  const descriptionInputRef = useRef();
+  const titleInputRef: any = useRef();
+  const imageInputRef: any = useRef();
+  const addressInputRef: any = useRef();
+  const descriptionInputRef: any = useRef();
 
   function submitHandler(event:any) {
     event.preventDefault();
