@@ -20,11 +20,15 @@ import dynamic from "next/dynamic";
 
 const Home = () => {
   const navigate = useNavigate();
+  const mainContainer = useRef<any>(null);
 
   let doc: any;
 
   useEffect(() => {
     console.log(document);
+    if (doc) {
+      return;
+    }
     doc = document;
     if (doc) {
       doc.getElementsByTagName("html")[0].style.overflow = "hidden";
@@ -57,64 +61,64 @@ const Home = () => {
   };
 
   const goToNextPage = async () => {
-    if (!doc) {
+    console.log(mainContainer);
+    if (!mainContainer.current.querySelector) {
       return;
     }
-    doc
-      ?.querySelector("#screen-" + screenNumber)
+    mainContainer.current.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.add("leave-from-top");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.add("leave-from-top");
 
     await new Promise((r) => setTimeout(r, 200));
 
-    doc?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
+    mainContainer.current?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
 
-    doc
+    mainContainer.current
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.remove("leave-from-top");
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.remove("leave-from-bottom");
 
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.remove("hide");
 
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.add("enter-from-bottom");
 
-      doc?.querySelector("#content-" + screenNumber)?.classList.add("hide");
+      mainContainer.current?.querySelector("#content-" + screenNumber)?.classList.add("hide");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.remove("leave-from-top");
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.remove("leave-from-bottom");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.remove("hide");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.add("enter-from-bottom");
 
@@ -122,64 +126,64 @@ const Home = () => {
   };
 
   const goToPrevPage = async () => {
-    if (!doc) {
+    if (!mainContainer.current) {
       return;
     }
-    doc
+    mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.add("leave-from-bottom");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.add("leave-from-bottom");
 
     await new Promise((r) => setTimeout(r, 200));
 
-    doc?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
+    mainContainer.current?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
 
-    doc
+    mainContainer.current
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.remove("leave-from-top");
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.remove("leave-from-bottom");
 
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.remove("hide");
 
-      doc
+      mainContainer.current
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.add("enter-from-top");
 
-      doc?.querySelector("#content-" + screenNumber)?.classList.add("hide");
+      mainContainer.current?.querySelector("#content-" + screenNumber)?.classList.add("hide");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.remove("leave-from-top");
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.remove("leave-from-bottom");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.remove("hide");
 
-      doc
+      mainContainer.current
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.add("enter-from-top");
 
@@ -298,6 +302,7 @@ const Home = () => {
   return (
     <>
       <div
+        ref={mainContainer}
         className="main-container"
         onMouseMove={handleMove}
         onWheelCapture={handleScroll}
@@ -509,7 +514,6 @@ const Home = () => {
 // export it with SSR disabled
 const HomeComponent = dynamic(() => Promise.resolve(Home), {
   ssr: false,
-  
 })
 
 export default HomeComponent;
