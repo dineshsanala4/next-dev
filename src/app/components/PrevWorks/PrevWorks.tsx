@@ -20,7 +20,7 @@ function PrevWorks() {
               <div className="card__cta">
                 <div className="card__price-box">
                   <p className="card__price-only">Technologies</p>
-                  <p className="card__price-value">ReactJS, Redux, NextJS..</p>
+                  <p className="card__price-value">ReactJS, Redux, GraphQL.</p>
                 </div>
                 <button className="button">View All Details!</button>
               </div>
@@ -43,7 +43,7 @@ function PrevWorks() {
                 <div className="card__price-box">
                   <p className="card__price-only">Technologies</p>
                   <p className="card__price-value">
-                    ReactJS, Remix, Styled Components..
+                    ReactJS, NextJS, Styled Components.
                   </p>
                 </div>
                 <button className="button">View All Details!</button>
@@ -95,7 +95,7 @@ function PrevWorks() {
                 <div className="card__price-box">
                   <p className="card__price-only">Technologies</p>
                   <p className="card__price-value">
-                    Angular, Material UI, ProgressiveWebApp..
+                    JavaScript, jCanvas, HTML5 Games.
                   </p>
                 </div>
                 <button className="button">View All Details!</button>

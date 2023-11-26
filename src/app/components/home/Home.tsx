@@ -364,7 +364,8 @@ const Home = () => {
                     </span>
                   </div>
                   <div className="wrap">
-                    <button className="btn" onClick={goToProjects}>
+                    {/* <button className="btn" onClick={goToProjects}> */}
+                    <button className="btn">
                       Show me more
                     </button>
                   </div>
@@ -390,7 +391,8 @@ const Home = () => {
                   </div>
 
                   <div className="wrap">
-                    <button className="btn" onClick={goToBlogs}>
+                    {/* <button className="btn" onClick={goToBlogs}> */}
+                    <button className="btn">
                       View All Articles
                     </button>
                   </div>
@@ -410,7 +412,10 @@ const Home = () => {
                     <span className="red-line2"></span>
                   </div>
                   <span className="heading-primary--sub">
-                    dnsh4989@gmail.com / <br /> twitter & linkedin.
+                    Email - <br /> 
+                  </span>
+                  <span className="email">
+                  dineshsanala4@gmail.com
                   </span>
                 </h1>
 

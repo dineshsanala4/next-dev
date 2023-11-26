@@ -26,7 +26,8 @@ const Header = () => {
           id="navi-toggle"
         />
 
-        <span className="blogs-link" onClick={goToBlogs}>
+        {/* <span className="blogs-link" onClick={goToBlogs}> */}
+        <span className="blogs-link">
           Blogs
         </span>
 
@@ -40,27 +41,22 @@ const Header = () => {
           <ul className="navigation__list">
             <li className="navigation__item">
               <a href="#" className="navigation__link">
-                <span>01</span>About Natous
+                Home
               </a>
             </li>
             <li className="navigation__item">
               <a href="#" className="navigation__link">
-                <span>02</span>Your benfits
+                Projects
               </a>
             </li>
             <li className="navigation__item">
               <a href="#" className="navigation__link">
-                <span>03</span>Popular tours
+                Articles
               </a>
             </li>
             <li className="navigation__item">
               <a href="#" className="navigation__link">
-                <span>04</span>Stories
-              </a>
-            </li>
-            <li className="navigation__item">
-              <a href="#" className="navigation__link">
-                <span>05</span>Book now
+                Contact
               </a>
             </li>
           </ul>

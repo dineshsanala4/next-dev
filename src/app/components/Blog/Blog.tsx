@@ -37,7 +37,7 @@ function Blog() {
                 {new Date().toLocaleDateString()}
               </div>
               <h2 className="bottom-box__title">
-                The Current State of Front-End Hydration
+                10 tricks for optimizing your react codebase
               </h2>
               <div className="bottom-box__description">
                 With the advent of FrontEnd Frameworks, Hydration has became a
@@ -57,7 +57,7 @@ function Blog() {
                 {new Date().toLocaleDateString()}
               </div>
               <h2 className="bottom-box__title">
-                The Current State of Front-End Hydration
+                Redux side effects & Different Approaches
               </h2>
               <div className="bottom-box__description">
                 With the advent of FrontEnd Frameworks, Hydration has became a
@@ -77,7 +77,7 @@ function Blog() {
                 {new Date().toLocaleDateString()}
               </div>
               <h2 className="bottom-box__title">
-                The Current State of Front-End Hydration
+                Correct ways of using css units & break points
               </h2>
               <div className="bottom-box__description">
                 With the advent of FrontEnd Frameworks, Hydration has became a
@@ -117,6 +117,25 @@ function Blog() {
                 {new Date().toLocaleDateString()}
               </div>
               <h2 className="bottom-box__title">
+                Correct ways of using css units & break points
+              </h2>
+              <div className="bottom-box__description">
+                With the advent of FrontEnd Frameworks, Hydration has became a
+                neccessity..
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="blog-card">
+            <img
+              className="blog-card__thumbnails"
+              src="https://live.staticflickr.com/65535/52756975910_69de8f798a_c.jpg"
+            />
+            <div className="bottom-box">
+              <div className="bottom-box__date">
+                {new Date().toLocaleDateString()}
+              </div>
+              <h2 className="bottom-box__title">
                 The Current State of Front-End Hydration
               </h2>
               <div className="bottom-box__description">
@@ -125,6 +144,26 @@ function Blog() {
               </div>
             </div>
           </div>
+
+          <div className="blog-card">
+            <img
+              className="blog-card__thumbnails"
+              src="https://live.staticflickr.com/65535/52757055928_1ff35552b7_c.jpg"
+            />
+            responsive apps
+            <div className="bottom-box">
+              <div className="bottom-box__date">
+                {new Date().toLocaleDateString()}
+              </div>
+              <h2 className="bottom-box__title">
+                The Current State of Front-End Hydration
+              </h2>
+              <div className="bottom-box__description">
+                With the advent of FrontEnd Frameworks, Hydration has became a
+                neccessity..
+              </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </div>
