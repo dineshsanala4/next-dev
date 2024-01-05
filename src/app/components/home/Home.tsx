@@ -314,7 +314,7 @@ const Home = () => {
               <div className="header__text-box">
                 <h1 id="screen-1" className={`heading-primary main-title`}>
                   <span className="heading-primary--main">
-                    DiNesh <br />
+                    DhiNesh <br />
                     SanaLa
                   </span>
                   <div className="red-line-seperation">
@@ -415,7 +415,7 @@ const Home = () => {
                     Email - <br /> 
                   </span>
                   <span className="email">
-                  dineshsanala4@gmail.com
+                  dhineshsanala@gmail.com
                   </span>
                 </h1>
 
