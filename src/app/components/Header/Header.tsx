@@ -66,7 +66,7 @@ const Header = () => {
       <header className="nav_header">
         <div className="header__logo-box">
           <span className="header__logo" onClick={goToHome}>
-            DhineSh Sanala
+            Dhinesh Sanala
           </span>
         </div>
       </header>
