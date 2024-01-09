@@ -366,7 +366,7 @@ const Home = () => {
                   <div className="wrap">
                     {/* <button className="btn" onClick={goToProjects}> */}
                     <button className="btn">
-                      Show me more
+                      All Projects
                     </button>
                   </div>
                 </h1>
@@ -393,7 +393,7 @@ const Home = () => {
                   <div className="wrap">
                     {/* <button className="btn" onClick={goToBlogs}> */}
                     <button className="btn">
-                      View All Articles
+                      All Articles
                     </button>
                   </div>
                 </h1>
