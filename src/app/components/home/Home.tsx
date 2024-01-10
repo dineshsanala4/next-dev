@@ -322,7 +322,7 @@ const Home = () => {
                     <span className="red-line2"></span>
                   </div>
                   <span className="heading-primary--sub">
-                    Web Developer / <br /> FullStack Engineer.
+                    Web Developer & <br /> FullStack Engineer.
                   </span>
                 </h1>
 
