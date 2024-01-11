@@ -340,7 +340,7 @@ const Home = () => {
                     <span className="red-line2"></span>
                   </div>
                   <span className="heading-primary--sub">
-                    Technologies / <br /> Programming
+                    Technologies & <br /> Programming
                     <br />
                     Languages.
                   </span>
@@ -360,7 +360,7 @@ const Home = () => {
                       <span className="red-line2"></span>
                     </div>
                     <span className="heading-primary--sub">
-                      Projects / <br /> Web Applications.
+                      Projects & <br /> Web Applications.
                     </span>
                   </div>
                   <div className="wrap">
@@ -384,7 +384,7 @@ const Home = () => {
                       <span className="red-line2"></span>
                     </div>
                     <span className="heading-primary--sub">
-                      Articles / <br /> Learnings &
+                      Articles & <br /> Learning 
                       <br />
                       Resourses.
                     </span>
