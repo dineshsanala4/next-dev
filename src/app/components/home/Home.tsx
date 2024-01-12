@@ -9,7 +9,7 @@ import "../../styles/App.css";
 import "../../styles/App.scss";
 import "./Home.scss";
 //import rocket from "../img/rocket.svg";
-//import rocket from "../img/rocket.svg";
+import rocket from "../../img/rocket.svg";
 import Skills from "../Skills/Skills";
 import Blog from "../Blog/Blog";
 import ContactMe from "../ContactMe/ContactMe";
@@ -509,9 +509,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/*<div>
+      <div>
         <img className="rocket" src={rocket} />
-                          </div>*/}
+                          </div>
     </>
   );
 };
