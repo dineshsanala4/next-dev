@@ -52,7 +52,7 @@ function Skills() {
             </li>
             <li>
               <span className="greenline blogger"></span>
-              <em>RabbitMQ</em>
+              <em>Django</em>
             </li>
             <li>
               <span className="greenline wordpress"></span>
