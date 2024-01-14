@@ -419,7 +419,7 @@ const Home = () => {
                   </span>
                 </h1>
 
-                {/* <div className="plannets-outline"></div> */}
+                <div className="plannets-outline"></div>
               </div>
             </div>
             <div className="col-3-of-4">
