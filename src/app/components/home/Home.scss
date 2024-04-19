@@ -206,6 +206,20 @@
     background-size: contain;
     margin-top: -1rem
   }
+
+  .rocket {
+    display: none;
+  }
+
+  .header__logo {
+    font-size: 1.9rem;
+  }
+
+  .blogs-link {
+    font-size: 1.9rem !important;
+    top: 4.5rem !important;
+    right: 10rem !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
