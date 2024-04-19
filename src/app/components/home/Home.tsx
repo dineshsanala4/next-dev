@@ -17,12 +17,16 @@ import { useNavigate } from "react-router";
 import Header from "../Header/Header";
 import dynamic from "next/dynamic";
 
-
 const Home = () => {
   const navigate = useNavigate();
   const mainContainer = useRef<any>(null);
 
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
   let doc: any;
+  // the required distance between touchStart and touchEnd to be detected as a swipe
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     console.log(document);
@@ -33,9 +37,26 @@ const Home = () => {
     if (doc) {
       doc.getElementsByTagName("html")[0].style.overflow = "hidden";
     }
-  }, [document])
+  }, [document]);
 
-  
+  const onTouchStart = (e: any) => {
+    setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientY);
+  };
+
+  const onTouchMove = (e: any) => setTouchEnd(e.targetTouches[0].clientY);
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isDownSwipe = distance > minSwipeDistance;
+    const isUpSwipe = distance < -minSwipeDistance;
+    if (isUpSwipe) {
+      triggerFrameChange("up");
+    } else if (isDownSwipe) {
+      triggerFrameChange("down");
+    }
+  };
 
   const layer1: any = [useRef(""), useRef(""), useRef("")];
   const layer2: any = [useRef("")];
@@ -46,7 +67,7 @@ const Home = () => {
   let [screenNumber, setScreenNumber] = useState(1);
   let [isScrolling, setIsScrolling] = useState(false);
 
-  console.log(screenNumber);
+  // console.log(screenNumber);
 
   const triggerFrameChange = (mode: string) => {
     if (mode === "up") {
@@ -65,60 +86,65 @@ const Home = () => {
     if (!mainContainer.current.querySelector) {
       return;
     }
-    mainContainer.current.querySelector("#screen-" + screenNumber)
+    mainContainer.current
+      .querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.add("leave-from-top");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.add("leave-from-top");
 
     await new Promise((r) => setTimeout(r, 200));
 
-    mainContainer.current?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
+    mainContainer.current
+      ?.querySelector("#screen-" + screenNumber)
+      ?.classList.add("hide");
 
     mainContainer.current
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.remove("leave-from-top");
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.remove("leave-from-bottom");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.remove("hide");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + (screenNumber + 1))
       ?.classList.add("enter-from-bottom");
 
-      mainContainer.current?.querySelector("#content-" + screenNumber)?.classList.add("hide");
+    mainContainer.current
+      ?.querySelector("#content-" + screenNumber)
+      ?.classList.add("hide");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.remove("leave-from-top");
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.remove("leave-from-bottom");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.remove("hide");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + (screenNumber + 1))
       ?.classList.add("enter-from-bottom");
 
@@ -132,58 +158,62 @@ const Home = () => {
     mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + screenNumber)
       ?.classList.add("leave-from-bottom");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-bottom");
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.remove("enter-from-top");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + screenNumber)
       ?.classList.add("leave-from-bottom");
 
     await new Promise((r) => setTimeout(r, 200));
 
-    mainContainer.current?.querySelector("#screen-" + screenNumber)?.classList.add("hide");
+    mainContainer.current
+      ?.querySelector("#screen-" + screenNumber)
+      ?.classList.add("hide");
 
     mainContainer.current
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.remove("leave-from-top");
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.remove("leave-from-bottom");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.remove("hide");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#screen-" + (screenNumber - 1))
       ?.classList.add("enter-from-top");
 
-      mainContainer.current?.querySelector("#content-" + screenNumber)?.classList.add("hide");
+    mainContainer.current
+      ?.querySelector("#content-" + screenNumber)
+      ?.classList.add("hide");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.remove("leave-from-top");
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.remove("leave-from-bottom");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.remove("hide");
 
-      mainContainer.current
+    mainContainer.current
       ?.querySelector("#content-" + (screenNumber - 1))
       ?.classList.add("enter-from-top");
 
@@ -306,6 +336,9 @@ const Home = () => {
         className="main-container"
         onMouseMove={handleMove}
         onWheelCapture={handleScroll}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
       >
         <Header />
         <div className="landing-page-container">
@@ -365,9 +398,7 @@ const Home = () => {
                   </div>
                   <div className="wrap">
                     {/* <button className="btn" onClick={goToProjects}> */}
-                    <button className="btn">
-                      All Projects
-                    </button>
+                    <button className="btn">All Projects</button>
                   </div>
                 </h1>
 
@@ -384,7 +415,7 @@ const Home = () => {
                       <span className="red-line2"></span>
                     </div>
                     <span className="heading-primary--sub">
-                      Articles & <br /> Learning 
+                      Articles & <br /> Learning
                       <br />
                       Resourses.
                     </span>
@@ -392,9 +423,7 @@ const Home = () => {
 
                   <div className="wrap">
                     {/* <button className="btn" onClick={goToBlogs}> */}
-                    <button className="btn">
-                      All Articles
-                    </button>
+                    <button className="btn">All Articles</button>
                   </div>
                 </h1>
 
@@ -412,14 +441,12 @@ const Home = () => {
                     <span className="red-line2"></span>
                   </div>
                   <span className="heading-primary--sub">
-                    Email - <br /> 
+                    Email - <br />
                   </span>
-                  <span className="email">
-                  dhineshsanala@gmail.com
-                  </span>
+                  <span className="email">dhineshsanala@gmail.com</span>
                 </h1>
 
-                <div className="plannets-outline"></div>
+                {/* <div className="plannets-outline"></div> */}
               </div>
             </div>
             <div className="col-3-of-4">
@@ -511,7 +538,7 @@ const Home = () => {
       </div>
       <div>
         <img className="rocket" src={rocket} />
-                          </div>
+      </div>
     </>
   );
 };
@@ -519,6 +546,6 @@ const Home = () => {
 // export it with SSR disabled
 const HomeComponent = dynamic(() => Promise.resolve(Home), {
   ssr: false,
-})
+});
 
 export default HomeComponent;
