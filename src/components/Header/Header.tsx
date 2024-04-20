@@ -1,20 +1,20 @@
 "use client";
+import { useRouter } from "next/router";
 import "./Header.scss";
-import { useNavigate } from "react-router";
 
 const Header = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const goToBlogs = (): any => {
-    navigate("/blogs");
+    router.push("/blogs");
   };
 
   const goToProjects = (): any => {
-    navigate("/projects");
+    router.push("/projects");
   };
 
   const goToHome = (): any => {
-    navigate("/");
+    router.push("/");
   };
 
   return (
@@ -27,9 +27,7 @@ const Header = () => {
         />
 
         {/* <span className="blogs-link" onClick={goToBlogs}> */}
-        <span className="blogs-link">
-          Blogs
-        </span>
+        <span className="blogs-link">Blogs</span>
 
         <label htmlFor="navi-toggle" className="navigation__button">
           <span className="navigation__icon">&nbsp;</span>

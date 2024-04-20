@@ -1,24 +1,21 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import PrevWorks from "../PrevWorks/PrevWorks";
-//import "../Variables.module.css";
-//import "./Home.scss";
-import "../../styles/main-styles.css";
-import "../../styles/main-styles.scss";
-import "../../styles/App.css";
-import "../../styles/App.scss";
+import "../styles/main-styles.css";
+import "../styles/main-styles.scss";
+import "../styles/App.css";
+import "../styles/App.scss";
 import "./Home.scss";
-//import rocket from "../img/rocket.svg";
-import rocket from "../../img/rocket.svg";
-import Skills from "../Skills/Skills";
-import Blog from "../Blog/Blog";
-import ContactMe from "../ContactMe/ContactMe";
-import { useNavigate } from "react-router";
-import Header from "../Header/Header";
+import rocket from "../img/rocket.svg";
 import dynamic from "next/dynamic";
+import Header from "@/components/Header/Header";
+import Skills from "@/components/Skills/Skills";
+import Blog from "@/components/Blog/Blog";
+import ContactMe from "@/components/ContactMe/ContactMe";
+import PrevWorks from "@/components/PrevWorks/PrevWorks";
+import { useRouter } from "next/router";
 
 const Home = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const mainContainer = useRef<any>(null);
 
   const [touchStart, setTouchStart] = useState(null);
@@ -249,11 +246,11 @@ const Home = () => {
   };
 
   const goToBlogs = (): any => {
-    navigate("/blogs");
+    router.push("/blogs");
   };
 
   const goToProjects = (): any => {
-    navigate("/projects");
+    router.push("/projects");
   };
 
   const handleLayer1 = (event: any) => {
@@ -398,7 +395,9 @@ const Home = () => {
                   </div>
                   <div className="wrap">
                     {/* <button className="btn" onClick={goToProjects}> */}
-                    <button className="btn">All Projects</button>
+                    <button onClick={goToProjects} className="btn">
+                      All Projects
+                    </button>
                   </div>
                 </h1>
 
