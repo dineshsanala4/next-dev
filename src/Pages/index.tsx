@@ -76,7 +76,6 @@ const Home = () => {
   };
 
   const goToNextPage = async () => {
-    console.log(mainContainer);
     if (!mainContainer.current.querySelector) {
       return;
     }
@@ -215,17 +214,14 @@ const Home = () => {
   };
 
   const handleScroll = (event: any) => {
-    console.log(event);
     event.stopPropagation();
     if (isScrolling) {
       return;
     }
     if (event.deltaY > 0) {
-      console.log("scrolling down");
       triggerFrameChange("down");
     }
     if (event.deltaY < 0) {
-      console.log("scrolling up");
       triggerFrameChange("up");
     }
     setIsScrolling(true);
