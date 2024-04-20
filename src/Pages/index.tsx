@@ -1,8 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import "../styles/main-styles.css";
 import "../styles/main-styles.scss";
-import "../styles/App.css";
 import "../styles/App.scss";
 import "./Home.scss";
 import rocket from "../img/rocket.svg";

@@ -3,10 +3,14 @@
 import { faMarsAndVenusBurst } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Projects.scss";
+import Header from "@/components/Header/Header";
+import "../../styles/App.scss";
+import "../../styles/main-styles.scss";
 
 const Projects = () => {
   return (
     <>
+      <Header />
       <div className="projs-container">
         <h2>Previous Projects</h2>
 

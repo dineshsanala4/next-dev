@@ -886,7 +886,7 @@ blockquote > span::after {
   margin-bottom: 3.5rem;
 }
 .header__logo-box {
-  position: absolute;
+  position: fixed !important;
 }
 .article-content .container {
   padding-bottom: 0;
