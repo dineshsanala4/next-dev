@@ -24,7 +24,6 @@ const Home = () => {
   const minSwipeDistance = 50;
 
   useEffect(() => {
-    console.log(document);
     if (doc) {
       return;
     }
